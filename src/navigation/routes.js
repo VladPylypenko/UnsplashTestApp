@@ -1,0 +1,2 @@
+export const MAIN_SCREEN = 'MAIN_SCREEN';
+export const FULL_PHOTO_SCREEN = 'FULL_PHOTO_SCREEN';
