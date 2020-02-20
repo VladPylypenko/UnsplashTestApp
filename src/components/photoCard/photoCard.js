@@ -5,13 +5,13 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  ActivityIndicator,
+  Linking,
 } from 'react-native';
 import {w, h} from '../../../constants';
 
 export const PhotoCard = ({onPress, data}) => {
   const {author, img, container, sub, author_img, footer} = styles;
-  const {urls, user} = data;
+  const {urls, user, links} = data;
 
   return (
     <View style={container}>
@@ -22,7 +22,9 @@ export const PhotoCard = ({onPress, data}) => {
       </TouchableOpacity>
       <View style={footer}>
         <Image style={author_img} source={{uri: user.profile_image.large}} />
-        <Text style={author}>{user.first_name}</Text>
+        <Text style={author} onPress={() => Linking.openURL(links.download)}>
+          {user.first_name}
+        </Text>
       </View>
     </View>
   );

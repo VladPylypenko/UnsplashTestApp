@@ -3,8 +3,6 @@ import {View, Image} from 'react-native';
 import {Header} from '../header';
 import {w, h} from '../../../constants';
 
-// export class FullScreenPhoto extends Component {
-//   render() {
 export const FullScreenPhoto = props => {
   const {urls, user} = props.navigation.state.params;
   return (
@@ -22,4 +20,3 @@ export const FullScreenPhoto = props => {
     </View>
   );
 };
-//}

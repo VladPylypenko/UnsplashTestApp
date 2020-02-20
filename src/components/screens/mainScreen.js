@@ -8,7 +8,7 @@ import {getPhotos} from '../../redux/store';
 import {connect} from 'react-redux';
 
 const MainScreen = props => {
-  useEffect(() => async () => props.getPhotos(), []);
+  useEffect(() => props.getPhotos(), []);
   const {title, photos, navigation} = props;
   return (
     <View>
